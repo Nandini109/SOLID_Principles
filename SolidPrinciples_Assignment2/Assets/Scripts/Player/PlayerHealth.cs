@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100; // Max health
+    [SerializeField] private int maxHealth = 100;
 
     private int currentHealth;
 
@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Player is dead!");
+            Destroy(gameObject);
         }
     }
 }
